@@ -4,12 +4,16 @@ const experiences = [
     title: "Desarrollador Frontend",
     company: "San Lorenzo SA Electro Harinera",
     date: "Marzo 2025 - Actualidad",
+    location: "📍 La Rambla, Andalucía, España",
+    modality: "Presencial",
     description: ``,
   },
   {
     title: "Desarrollador Software",
     company: "Siscom Ingeniería S.L.",
     date: "Marzo 2024 - Junio 2024",
+    location: "📍 Montilla, Andalucía, España",
+    modality: "Remoto",
     description: `Optimicé y refactoricé componentes en un proyecto de React + Fluent UI para mejorar el rendimiento y la experiencia del usuario.
        Rediseñé la interfaz gráfica de algunos componentes para mejorar la organización y la usabilidad.`,
   },
@@ -17,6 +21,8 @@ const experiences = [
     title: "Técnico Informático",
     company: "DALET",
     date: "Marzo 2019 - Junio 2019",
+    location: "📍 Novellara, Emilia-Romaña, Italia",
+    modality: "Presencial",
     description: `Utilicé Adobe Illustrator, Photoshop e InDesign para la creación y modificación de manuales técnicos de maquinaria agrícola.
             Colaboré en el desarrollo de un script en Python para la generación de archivos a partir de una tabla de Excel, mejorando la eficiencia del proceso.`,
   },
@@ -35,6 +41,10 @@ const experiences = [
               <h3>{experience.title}</h3>
               <p class="company">{experience.company}</p>
               <p class="date">{experience.date}</p>
+              <p class="location">
+                {experience.location} · {experience.modality}
+              </p>
+              <br />
             </div>
             <p class="description">{experience.description}</p>
           </div>
@@ -77,8 +87,8 @@ const experiences = [
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    border: 2px solid #ff6f61; 
-    background-color: transparent; 
+    border: 2px solid #ff6f61;
+    background-color: transparent;
     z-index: 1;
   }
 

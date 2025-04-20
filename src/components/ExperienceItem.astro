@@ -1,5 +1,5 @@
 ---
-const { title, company, date, description } = Astro.props;
+const { title, company, date, description, location, modality } = Astro.props;
 ---
 
 <div class="experience-item">
@@ -7,6 +7,7 @@ const { title, company, date, description } = Astro.props;
   <div class="content">
     <h3>{title}</h3>
     <h4>{company}</h4>
+    <span class="meta">{location} · {modality}</span>
     <span class="date">{date}</span>
     <p>{description}</p>
   </div>
@@ -51,6 +52,13 @@ const { title, company, date, description } = Astro.props;
     margin: 0.2rem 0;
     font-weight: 500;
     color: #555;
+  }
+
+  .content .meta {
+    font-size: 0.9rem;
+    color: #666;
+    display: block;
+    margin-bottom: 0.2rem;
   }
 
   .content .date {
