@@ -1,0 +1,79 @@
+---
+import SkillTag from "./SkillTag.astro";
+
+const skills = [
+  {
+    name: "Java",
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  },
+  { name: "Laravel", url: "https://cdn.simpleicons.org/laravel/FF2D20" },
+  { name: "PHP", url: "https://cdn.simpleicons.org/php/777BB4" },
+  { name: "Angular", url: "https://cdn.simpleicons.org/angular/DD0031" },
+  { name: "Spring Boot", url: "https://cdn.simpleicons.org/springboot/6DB33F" },
+  { name: "React", url: "https://cdn.simpleicons.org/react/61DAFB" },
+  { name: "Docker", url: "https://cdn.simpleicons.org/docker/2496ED" },
+];
+---
+
+<section id="sobre-mi" class="fade-in">
+  <div class="container">
+    <h2 class="section-title">Sobre Mí</h2>
+    <div class="about-content">
+      <div>
+        <p>
+          ¡Hola! Soy <strong>Alejandro Gálvez García</strong> 👋, soy desarrollador
+          junior
+          <strong>Full Stack</strong> apasionado por la tecnología y el desarrollo
+          de software 💻.
+        </p>
+        <p>
+          Tengo experiencia en varias tecnologías como
+          <em>Angular</em>, <em>Laravel</em>, <em>Java</em>, <em>Spring Boot</em
+          >, <em>React</em>, <em>Docker</em>. Siempre me encanta <strong
+            >aprender</strong
+          > 📚 y <em>mejorar continuamente</em>, y siempre estoy buscando nuevos <strong
+            >desafíos</strong
+          > y
+          <strong>oportunidades</strong> para crecer 🚀.
+        </p>
+      </div>
+
+      <div>
+        <div class="skills">
+          {
+            skills.map((skill) => (
+              <SkillTag name={skill.name} url={skill.url} />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .about-content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
